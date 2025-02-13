@@ -14,6 +14,7 @@ body{
     background-color: white;
 }
 
+
 .products {
     width: 100%;
     display: flex;
@@ -117,6 +118,104 @@ img{
     color: #0b0b0b;
     line-height: 32px;
 }
+
+.add-to-cart{
+    background-color: #353432;
+    color: #eee;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Cart */
+
+/* .container{
+    margin: auto;
+    max-width: 90vw;
+    text-align: center;
+    padding-top: 10px;
+    transition: transform .5s;
+} */
+
+/* body.showCart .container{
+    transform: translateX(-250px);
+} */
+
+.cartTab{
+    width: 400px;
+    background-color: #353432;
+    color: #eee;
+    position: fixed;
+    inset: 0 -400px 0 auto;
+    display: grid;
+    grid-template-rows: 70px 1fr 70px;
+    /* transition: .5s; */
+}
+
+body.showCart .cartTab{
+    inset: 0 0 0 auto;
+}
+
+.cartTab .btn{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.cartTab button{
+    background-color: #E8BC0E;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.cartTab .close{
+    background-color: #eee;
+}
+
+.cartTab .listCart .item img{
+    width: 100%;
+}
+
+.cartTab .listCart .item{
+    display: grid;
+    grid-template-columns: 70px 150px 50px 1fr;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+.listCart .quantity span{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+    color: #555;
+    cursor: pointer;
+}
+
+.listCart .quantity span:nth-child(2){
+    background-color: transparent;
+    color: #eee;
+    cursor: auto;
+}
+
+.listCart .item:nth-child(even){
+    background-color: #eee1;
+}
+
+.listCart{
+    overflow: auto;
+}
+
+.listCart::-webkit-scrollbar{
+    width: 0;
+}
+
+
+
+
 
 
 /* Section 2 */
@@ -260,10 +359,6 @@ img{
     font-weight: 500;
 }
 
-/* .swiper-slide-active .title {
-    bottom: -10px;
-    box-shadow: 0 20px 30px 2px rgba(25,43,20, 0.6);
-} */
   
 .swiper-pagination {
     --swiper-pagnation-botton: -6px;

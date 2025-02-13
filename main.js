@@ -25,3 +25,30 @@ const filterCards = (e) => {
 
 filterButtons.forEach(button => button.addEventListener("click", filterCards));
 
+// Section 3
+
+
+
+let swiper = new Swiper(".swiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    initialSlide: 2,
+    speed: 600,
+    preventClicks: true, 
+    slidesPerview: "auto",
+    coverflowEffect: {
+        rotate: 0,
+        stretch: 80,
+        depth: 350,
+        modifier: 1,
+        slideShadows: true,
+    }, 
+    on: {
+        click(event) {
+            swiper.slideTo(this.clickedIndex);
+        },
+    },
+    pagination: {
+        el: ".swiper-pagination",
+    },
+})
